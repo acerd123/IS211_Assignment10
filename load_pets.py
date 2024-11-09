@@ -1,11 +1,11 @@
 import sqlite3
 
 def load_data():
-    # Connect to the SQLite database
+    
     conn = sqlite3.connect('pets.db')
     cursor = conn.cursor()
 
-    # Insert data into tables
+    
     cursor.execute("INSERT INTO person (id, first_name, last_name, age) VALUES (1, 'James', 'Smith', 41)")
     cursor.execute("INSERT INTO person (id, first_name, last_name, age) VALUES (2, 'Diana', 'Greene', 23)")
     cursor.execute("INSERT INTO person (id, first_name, last_name, age) VALUES (3, 'Sara', 'White', 27)")
@@ -25,7 +25,7 @@ def load_data():
     cursor.execute("INSERT INTO person_pet (person_id, pet_id) VALUES (3, 5)")
     cursor.execute("INSERT INTO person_pet (person_id, pet_id) VALUES (4, 6)")
 
-    # Commit changes and close the connection
+    
     conn.commit()
     conn.close()
 
