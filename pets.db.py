@@ -1,10 +1,10 @@
 import sqlite3
 
-# Connect to (or create) the pets.db database
+
 conn = sqlite3.connect('pets.db')
 cursor = conn.cursor()
 
-# Create tables
+
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS person (
     id INTEGER PRIMARY KEY,
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS person_pet (
 );
 ''')
 
-# Commit and close connection
+
 conn.commit()
 conn.close()
 
